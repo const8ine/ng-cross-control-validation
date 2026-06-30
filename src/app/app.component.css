@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  background: #fff;
+  color: #2c3e50;
+}
+
+h1 {
+  margin: 0 0 .8em 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+label {
+  font-size: .9rem;
+}
+
+input[type="text"],
+select {
+  position: relative;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color .15s ease-out, box-shadow .15s ease-out;
+}
+
+input[type="text"]:hover,
+select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 4px rgba(91,156,255,.15);
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 0 4px rgba(91,156,255,.25);
+}
+
+.error {
+  color: #e74c3c;
+  font-size: .85rem;
+  margin-top: 4px;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #3498db;
+  color: #fff;
+  transition: background .2s ease-out, transform .15s ease-out;
+}
+
+button:disabled {
+  background: #bfcfe8;
+  cursor: default;
+}
+
+button:hover:not(:disabled),
+button:focus:not(:disabled) {
+  background: #2980b9;
+}
+
+

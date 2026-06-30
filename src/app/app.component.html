@@ -1,0 +1,34 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+  <h1>Cross Control Validation Demo</h1>
+
+  <div class="form-group">
+    <label for="subscriptionType">Subscription Type</label>
+    <select id="subscriptionType" formControlName="subscriptionType">
+      <option value="">Select type</option>
+      <option value="basic">Basic</option>
+      <option value="premium">Premium</option>
+    </select>
+
+    <div class="error" *ngIf="form.get('subscriptionType')?.touched && form.get('subscriptionType')?.invalid">
+      Please select a subscription type
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="discountCode">Premium Discount Code</label>
+    <input
+      id="discountCode"
+      type="text"
+      formControlName="discountCode"
+      placeholder="Enter discount code"
+    />
+
+    <div class="error" *ngIf="form.get('discountCode')?.touched && form.get('discountCode')?.errors">
+      <span *ngIf="form.get('discountCode')?.errors?.['invalidTarget']">
+        This type of discount code is only valid for Premium subscriptions
+      </span>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

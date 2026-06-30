@@ -1,0 +1,33 @@
+{
+  "name": "ng-cross-control-validation",
+  "version": "1.0.0",
+  "description": "Cross-control validator for your Angular project",
+  "peerDependencies": {
+    "@angular/common": "^19.2.0",
+    "@angular/core": "^19.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "main": "dist/cross-control-validators.js",
+  "types": "dist/cross-control-validators.d.ts",
+  "keywords": [
+    "angular",
+    "forms",
+    "validation",
+    "validators",
+    "reactive-forms",
+    "cross-field-validation"
+  ],
+  "author": "Tina Rafikova",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/const8ine/ng-cross-control-validation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/const8ine/ng-cross-control-validation/issues"
+  },
+  "homepage": "https://github.com/const8ine/ng-cross-control-validation#readme"
+}
