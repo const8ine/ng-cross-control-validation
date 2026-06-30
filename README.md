@@ -87,5 +87,6 @@ Once the server is running, open your browser and navigate to `http://localhost:
 ```shell
 cd projects/ng-cross-control-validation
 npm i
-npm run start
+ng build ng-cross-control-validation
 ```
+You will find the output in the ./dist folder of the project root.
