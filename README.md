@@ -1,10 +1,10 @@
 # ng-cross-control-validation — Angular Cross-Control Validator
 
-![logo.png](logo.png)
+A lightweight and flexible cross-field validation library for Angular Reactive Forms. Easily handle advanced validation scenarios where one form control's state or validity depends directly on the value of another.
 
-This package provides custom cross-field validator for your Angular project — when a control in your form depends on the other control's value.
+![NPM Version](https://img.shields.io/npm/v/ng-cross-control-validation) ![Static Badge](https://img.shields.io/badge/angular%20package-red) ![NPM License](https://img.shields.io/npm/l/ng-cross-control-validation)
 
-Supports Angular 17 and above.
+<img src="logo.png" alt="logo" width="300px" height="auto" />
 
 ## Installation
 
@@ -12,20 +12,19 @@ Supports Angular 17 and above.
 npm install ng-cross-control-validation
 ```
 
+### Features
+* ⚡️ **Reactive**: Automatically re-evaluates when dependent controls change.
+* 📦 **Lightweight**: Zero external dependencies (only Angular peer dependencies).
+* ⚙️ **Modern**: Full support for Angular 17 and above (including standalone components).
+
+
 ## Usage
 
 ```typescript
 import {
     crossControlValidator,
     crossControlEnabler,
-} from 'angular-form-validators';
-```
-
-```typescript
-const form = this.fb.group({
-    description: ['', [Validators.required, maxCharacterValidator(500)]],
-    notes: ['', [maxCharacterValidator(1000)]]
-});
+} from 'ng-cross-control-validation';
 ```
 
 ### crossControlValidator
@@ -55,38 +54,37 @@ const form = this.fb.group({
 
 ## Examples
 
-See **./examples**
+Explore the [examples folder](./examples) for full implementation use-cases and complex form setups.
 
 ## Contributing
 
 1. Fork this repository
 2. Create your feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes. Please adhere to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) methodology
+3. Commit your changes. Please adhere to the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) methodology
 4. Push to the branch (`git push origin feature/you-feature`)
 5. Open a Pull Request
 
-## Local setup
+## Local Development Setup
+
+Clone the repository and install the dependencies:
 
 ```shell
 npm i
 ```
 
-### Example app
+### Run Example Application
+
 ```shell
 npm run start
 ```
 
-```shell
-ng serve
-```
-
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-### Package itself
+### Build the Package
 
 ```shell
 cd projects/ng-cross-control-validation
 npm i
 ng build ng-cross-control-validation
 ```
-You will find the output in the ./dist folder of the project root.
+The compiled output will be generated in the `./dist/ng-cross-control-validation` folder.
