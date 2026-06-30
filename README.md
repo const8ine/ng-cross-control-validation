@@ -89,4 +89,3 @@ cd projects/ng-cross-control-validation
 npm i
 npm run start
 ```
-Read more in a correspondent documentation in **projects/ng-cross-control-validation/README.md**

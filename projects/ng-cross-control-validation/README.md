@@ -1,55 +1,50 @@
-# NgCrossControlValidation
+# ng-cross-control-validation — Angular Cross-Control Validator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
-
-## Code scaffolding
-
-```bash
-ng generate --help
+```shell
+npm i ng-cross-control-validation
 ```
 
-## Building
+This package provides cross-control validator for your Angular project — when a control in your form depends on the other control's value.
 
-To build the library, run:
+Supports Angular 17 and above.
 
-```bash
-ng build ng-cross-control-validation
+## Usage
+
+```typescript
+import {
+    crossControlValidator,
+    crossControlEnabler,
+} from 'angular-form-validators';
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
-
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/ng-cross-control-validation
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```typescript
+const form = this.fb.group({
+    description: ['', [Validators.required, maxCharacterValidator(500)]],
+    notes: ['', [maxCharacterValidator(1000)]]
+});
 ```
 
-## Running end-to-end tests
+### crossControlValidator
+Creates a cross-field validator that validates one control based on the value of another control.
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+```typescript
+const form = this.fb.group({
+  subscriptionType: ['', Validators.required],
+  discountCode: [
+    '',
+    [crossControlValidator('subscriptionType', (type: string) => type === 'premium')]
+  ]
+});
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### crossControlEnabler
+Dynamically enables or disables a form control based on a specific value of another control.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```typescript
+const form = this.fb.group({
+    feesRateAlignment: ['', [Validators.required]],
+    feesRateAlignmentPolicy: ['', [
+        crossControlEnabler('feesRateAlignment', (value) => value === 'default')
+    ]]
+});
+```
