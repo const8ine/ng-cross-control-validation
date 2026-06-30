@@ -2,7 +2,7 @@
 
 ![logo.png](logo.png)
 
-This package provides cross-control validator for your Angular project — when a control in your form depends on the other control's value.
+This package provides custom cross-field validator for your Angular project — when a control in your form depends on the other control's value.
 
 Supports Angular 17 and above.
 
