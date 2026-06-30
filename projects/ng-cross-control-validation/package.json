@@ -1,6 +1,6 @@
 {
   "name": "ng-cross-control-validation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cross-control validator for your Angular project",
   "peerDependencies": {
     "@angular/common": "^19.2.0",
