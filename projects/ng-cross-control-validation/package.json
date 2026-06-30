@@ -1,7 +1,7 @@
 {
   "name": "ng-cross-control-validation",
-  "version": "1.0.1",
-  "description": "Cross-control validator for your Angular project",
+  "version": "1.0.2",
+  "description": "Lightweight cross-field reactive validation and dynamic enabling library for Angular 17+ forms.",
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"
@@ -18,7 +18,10 @@
     "validation",
     "validators",
     "reactive-forms",
-    "cross-field-validation"
+    "cross-field-validation",
+    "angular 17",
+    "custom validator",
+    "dynamic form"
   ],
   "author": "Tina Rafikova",
   "license": "MIT",
